@@ -1,9 +1,12 @@
 const { connectDatabase } = require("./database/database")
+
+const app=require("express")()
+
+
+
 // above line comes automatically when "connectDatabase()" is called.
 
 
-const app=require("express")()
-// const{connectDatabase}=require("./database/database")
 
 
 // DATABASE CONNECTING FUNCTION
