@@ -1,7 +1,6 @@
 
 const mongoose=require("mongoose")
 
-
 // CONECTING TO THE DATABASE.
 // mongoose.connect("mongodb+srv://nischalshrestha800:<password>@cluster0.0tq8wyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 ")
 // THINGS TO REMEMBER:-- Mathi ko line ma vako <password> lai replace garne agi afule rakhya password bata hai ta.

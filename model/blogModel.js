@@ -12,7 +12,7 @@ const blogSchema=new mongoose.Schema({
     description:{
         type:String
     }
-},{
+},{  
     timestamps:true
 })
 const Blog=mongoose.model("Blog",blogSchema)
