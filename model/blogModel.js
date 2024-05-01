@@ -15,3 +15,7 @@ const blogSchema=new mongoose.Schema({
 },{
     timestamps:true
 })
+const Blog=mongoose.model("Blog",blogSchema)
+module.exports=Blog
+// instead of two line above we can also write
+// model.exports=mongoose.model("Blog",blogSchema)
