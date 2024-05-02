@@ -6,6 +6,7 @@ const mongoose=require("mongoose")
 // THINGS TO REMEMBER:-- Mathi ko line ma vako <password> lai replace garne agi afule rakhya password bata hai ta.
 
 exports.connectDatabase=async()=>{
+   //  await mongoose.connect("mongodb+srv://nischalshrestha800:narayanShrestha800@cluster0.0tq8wyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     await mongoose.connect("mongodb+srv://nischalshrestha800:narayanShrestha800@cluster0.0tq8wyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   console.log("Database Connected SucessFully")
 

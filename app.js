@@ -1,4 +1,5 @@
 const { connectDatabase } = require("./database/database")
+const Blog = require("./model/blogModel")
 
 const app=require("express")()
 
@@ -6,14 +7,14 @@ const app=require("express")()
 
 
 // DATABASE CONNECTING FUNCTION
+// Error Alert:when we call below function it should automatically add details at top
 connectDatabase()
 
 // GET API  -->  /
 app.get("/",(req,res)=>{
     res.json({
-        name:"Naruto",
-        jutsu:"Shadow Clone Jutsu",
-        friend:"Sasuke"
+     status :200,
+     message:"Success"
 
     })
 })
@@ -21,17 +22,19 @@ app.get("/",(req,res)=>{
 // CREATE BLOG API
 app.post("/createBlog",async(req,res)=>{
     // Insert to database logics goess here.
-    await Blog.create({
-        title: req.body.title,
-        subTitle:req.body.subTitle,
-        description:req.body.description
-    })
+ 
 
+// Error Alert:when we call below function it should automatically add details at top
+await Blog.create({
+    title:req.body.title,
+    subTitle:req.body.subTitleitle,
+    description:req.body.description
+})
 
 
 
     res.json({
-        status:200,
+        status:201,
         message:"Blog Created Successfully."
     })
 })
