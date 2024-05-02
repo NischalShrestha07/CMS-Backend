@@ -19,7 +19,17 @@ app.get("/",(req,res)=>{
 })
 
 // CREATE BLOG API
-app.post("/createBlog",(req,res)=>{
+app.post("/createBlog",async(req,res)=>{
+    // Insert to database logics goess here.
+    await Blog.create({
+        title: req.body.title,
+        subTitle:req.body.subTitle,
+        description:req.body.description
+    })
+
+
+
+
     res.json({
         status:200,
         message:"Blog Created Successfully."
