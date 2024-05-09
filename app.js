@@ -8,13 +8,12 @@ app.get("/", (req, res) => {
     res.json({
         status: 200,
         message: "Success"
-
     })
 })
 
 
 
-
+// create Blog API
 
 app.listen(2000, () => {
     console.log("NodeJS has Started in port 2000");
