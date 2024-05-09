@@ -1,9 +1,9 @@
 const app = require("express")()
-const mongoose = require("mongoose")
+const { connectDatabase } = require("./database/database")
 
 
-
-
+// Database Connection Function
+connectDatabase()
 app.get("/", (req, res) => {
     res.json({
         status: 200,
