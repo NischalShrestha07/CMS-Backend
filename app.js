@@ -2,7 +2,7 @@ const app = require("express")()
 const { connectDatabase } = require("./database/database")
 
 
-// Database Connection Function
+// Database Connection Function:
 connectDatabase()
 app.get("/", (req, res) => {
     res.json({
