@@ -1,3 +1,7 @@
+// FieldName--> Column Name
+
+
+
 // CREATE BLOG API
 // app.post("/createBlog", async (req, res) => {
 //     // console.log(req.body);
