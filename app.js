@@ -1,16 +1,14 @@
-const { connectDatabase } = require("./database/database")
-const Blog = require("./model/blogModel")
-
 const app = require("express")()
+const mongoose = require("mongoose")
 
-// above line comes automatically when "connectDatabase()" is called.
+// connecting to Database
+mongoose.connect("mongodb+srv://nischalshrestha800:narayanShrestha800@cluster0.0tq8wyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    .then(() => {
+        console.log("Database connected successfully");
+    })
 
 
-// DATABASE CONNECTING FUNCTION
-// Error Alert:when we call below function it should automatically add details at top
-connectDatabase()
 
-// GET API  -->  /
 app.get("/", (req, res) => {
     res.json({
         status: 200,
@@ -21,11 +19,7 @@ app.get("/", (req, res) => {
 
 
 
-app.post("/createBlog", (req, res) => {
-    console.log(req.body);
 
-
-})
 
 app.listen(2000, () => {
     console.log("NodeJS has Started in port 2000");
