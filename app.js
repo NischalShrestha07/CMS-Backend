@@ -21,22 +21,25 @@ app.get("/", (req, res) => {
 
 // create Blog API
 app.post("/createBlog", async (req, res) => {
-    console.log(req.body);
+    const title = req.body.title;
+    const subTitle = req.body.subTitle;
+    const description = req.body.description;
+
+
     // Insert to database logic goes here
-    // await Blog.create({
-    //     title: req.body.title,
-    //     subTitle: req.body.subTitle,
-    //     description: req.body.description
-
-    // })
-
+    await Blog.create({
+        title: title,
+        subTitle: subTitle,
+        description: description
+    })
 
 
 
-    // res.json({
-    //     status: 200,
-    //     message: "Blog Created Successfully."
-    // })
+
+    res.json({
+        status: 200,
+        message: "Blog Created Successfully."
+    })
 })
 
 app.listen(2000, () => {
