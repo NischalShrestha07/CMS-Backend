@@ -1,11 +1,6 @@
 const app = require("express")()
 const mongoose = require("mongoose")
 
-// connecting to Database
-mongoose.connect("mongodb+srv://nischalshrestha800:narayanShrestha800@cluster0.0tq8wyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-    .then(() => {
-        console.log("Database connected successfully");
-    })
 
 
 
