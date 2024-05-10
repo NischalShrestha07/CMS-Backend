@@ -17,7 +17,17 @@ app.get("/", (req, res) => {
     })
 })
 
+// GET API => /blogs (All Blogs)
+app.get("/blogs", async (req, res) => {
+    // fetching/reading all Blogs from Blog model
+    const blogs = await Blog.find()
 
+    res.json({
+        status: 200,
+        message: "Blogs Fetched Successfully.",
+        data: blogs
+    })
+})
 
 // create Blog API
 app.post("/createBlog", async (req, res) => {
