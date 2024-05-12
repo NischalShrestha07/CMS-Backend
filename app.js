@@ -37,11 +37,11 @@ app.post("/createBlog", async (req, res) => {
 
 
     // Insert to database logic goes here
-    await Blog.create({
-        title: title,
-        subTitle: subTitle,
-        description: description
-    })
+    // await Blog.create({
+    //     title: title,
+    //     subTitle: subTitle,
+    //     description: description
+    // })
 
 
 
