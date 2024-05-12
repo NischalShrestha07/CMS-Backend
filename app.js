@@ -22,37 +22,37 @@ app.get("/blogs", async (req, res) => {
     // fetching/reading all Blogs from Blog model
     const blogs = await Blog.find()
 
-    //     res.json({
-    //         status: 200,
-    //         message: "Blogs Fetched Successfully.",
-    //         data: blogs
-    //     })
-    // })
+    res.json({
+        status: 200,
+        message: "Blogs Fetched Successfully.",
+        data: blogs
+    })
+})
 
-    // create Blog API
-    app.post("/createBlog", async (req, res) => {
-        const title = req.body.title;
-        const subTitle = req.body.subTitle;
-        const description = req.body.description;
-
-
-        // Insert to database logic goes here
-        await Blog.create({
-            title: title,
-            subTitle: subTitle,
-            description: description
-        })
+// create Blog API
+app.post("/createBlog", async (req, res) => {
+    const title = req.body.title;
+    const subTitle = req.body.subTitle;
+    const description = req.body.description;
 
 
-
-
-        res.json({
-            status: 200,
-            message: "Blog Created Successfully."
-        })
+    // Insert to database logic goes here
+    await Blog.create({
+        title: title,
+        subTitle: subTitle,
+        description: description
     })
 
-    app.listen(2000, () => {
-        console.log("NodeJS has Started in port 2000");
 
+
+
+    res.json({
+        status: 200,
+        message: "Blog Created Successfully."
     })
+})
+
+app.listen(2000, () => {
+    console.log("NodeJS has Started in port 2000");
+
+})
