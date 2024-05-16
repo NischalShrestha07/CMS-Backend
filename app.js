@@ -21,12 +21,21 @@ app.get("/", (req, res) => {
 app.get("/blogs", async (req, res) => {
     // fetching/reading all Blogs from Blog model
     const blogs = await Blog.find()
+    // check if blogs contains data or not
+    if (blogs.length == 0) {
+        res.json({
+            status: 200,
+            message: "Empty Blogs",
+        })
 
-    res.json({
-        status: 200,
-        message: "Blogs Fetched Successfully.",
-        data: blogs
-    })
+    } else {
+
+        res.json({
+            status: 200,
+            message: "Blogs Fetched Successfully.",
+            data: blogs
+        })
+    }
 })
 
 // create Blog API
