@@ -39,6 +39,11 @@ app.get("/blogs", async (req, res) => {
 })
 
 // GET API-> /blogs/:id (single Blog)   
+app.get("/blogs/:id", async (req, res) => {
+
+    const id = req.params.id
+    // const blog = await Blog.find({ _id: id })
+})
 
 
 // create Blog API
