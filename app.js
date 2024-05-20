@@ -67,7 +67,7 @@ app.post("/createBlog", async (req, res) => {
 })
 
 
-// UPDATE BLOG API  yo naya kai halna xainxa!!
+// UPDATE BLOG API  yo naya kai halna xainxa!!fd
 app.patch("/blogs/:id", async (req, res) => {
     const id = req.params.id
     const title = req.body.title
