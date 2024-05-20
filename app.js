@@ -46,7 +46,7 @@ app.get("/blogs/:id", async (req, res) => {
 })
 
 
-// create Blog API
+// create Blog API naya blogs banuda xainxa!!
 app.post("/createBlog", async (req, res) => {
     const title = req.body.title;
     const subTitle = req.body.subTitle;
@@ -67,13 +67,12 @@ app.post("/createBlog", async (req, res) => {
 })
 
 
-// UPDATE BLOG API
+// UPDATE BLOG API  yo naya kai halna xainxa!!
 app.patch("/blogs/:id", async (req, res) => {
     const id = req.params.id
     const title = req.body.title
     const subTitle = req.body.subTitle
     const description = req.body.description
-
 
 
     await Blog.findByIdAndUpdate(id, {
@@ -86,6 +85,18 @@ app.patch("/blogs/:id", async (req, res) => {
 
     })
 
+})
+
+
+// DELETE API aba post garya lai xai delete garne
+app.delete("/blogs/:id", async (req, res) => {
+    const id = req.params.id
+    // const {id} =req.params
+    await Blog.findByIdAndDelete(id)
+
+    res.status(200).json({
+        message: "Blogs Deleted SuccessFully."
+    })
 })
 
 app.listen(2000, () => {
