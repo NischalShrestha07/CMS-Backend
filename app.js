@@ -74,6 +74,17 @@ app.patch("/blogs/:id", async (req, res) => {
     const subTitle = req.body.subTitle
     const description = req.body.description
 
+    // check if blog with id exists or not
+
+    // const isBlogFound = await Blog.find({
+    //     id: id
+    // })
+    // if (isBlogFound.length == 0) {
+    //     return res.json({
+    //         message: "No Blog found with that id"
+    //     })
+    // }
+
 
     await Blog.findByIdAndUpdate(id, {
         title: title,
