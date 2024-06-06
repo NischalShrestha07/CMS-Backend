@@ -52,6 +52,7 @@ app.post("/createBlog", async (req, res) => {
     const subTitle = req.body.subTitle;
     const description = req.body.description;
 
+    // changes
 
     // Insert to database logic goes here
     await Blog.create({
