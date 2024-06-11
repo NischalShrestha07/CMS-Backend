@@ -2,6 +2,10 @@ const { connectDatabase } = require("./database/database")
 const Blog = require("./model/blogModel")
 const express = require("express")
 const app = express()
+const cors = require("cors")
+
+
+app.use(cors())
 
 
 app.use(express.json())
