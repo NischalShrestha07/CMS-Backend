@@ -2,10 +2,6 @@ const { connectDatabase } = require("./database/database")
 const Blog = require("./model/blogModel")
 const express = require("express")
 const app = express()
-const cors = require("cors")
-
-
-app.use(cors())
 
 
 app.use(express.json())
@@ -17,9 +13,10 @@ connectDatabase()
 app.get("/", (req, res) => {
     res.json({
         status: 200,
-        message: "Success"
+        message: "Success I am alive."
     })
 })
+// API => http://localhost:2000/
 
 // GET API => /blogs (All Blogs)
 app.get("/blogs", async (req, res) => {
