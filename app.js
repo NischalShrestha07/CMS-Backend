@@ -2,6 +2,14 @@ const { connectDatabase } = require("./database/database")
 const Blog = require("./model/blogModel")
 const express = require("express")
 const app = express()
+const cors = require("cors")
+
+
+// if want to use multiple then use array Examples: origin:["http://localhost:5174/","http://localhost:5174/"]
+app.use(cors({
+    origin: "http://localhost:5173"
+}))
+
 
 
 app.use(express.json())
@@ -34,7 +42,7 @@ app.get("/blogs", async (req, res) => {
         res.status(200).json({
             // status: 200,
             message: "Blogs Fetched Successfully.",
-            data: blogs
+            blogs: blogs
         })
     }
 })

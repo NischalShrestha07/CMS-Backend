@@ -1,0 +1,13 @@
+1. project start (react)
+2. UI banaunu paryo (Get request) /blogs(get)
+3.axios,intregration.CORS(cross origin resource sharing)
+4. loops (map,forEach)
+
+Api  =>  http://localhost:2000/blogs  -  GET
+fetch(API)
+axios
+axios is the third party package
+
+
+
+
