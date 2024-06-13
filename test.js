@@ -20,6 +20,7 @@ const doubleNumbers = numbers.map((number) => {
 console.log("Double:", doubleNumbers);
 // forEach doesnt return values its give NaH(Not a Number)
 
+
 const words = ['nischal', 'hello', 'nepal', 'worldCup']
 const capitalWords = words.map((word) => {
 
