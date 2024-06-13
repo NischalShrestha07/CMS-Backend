@@ -40,7 +40,7 @@ app.get("/blogs", async (req, res) => {
     } else {
 
         res.status(200).json({
-            // status: 200,
+            status: 200,
             message: "Blogs Fetched Successfully.",
             blogs: blogs
         })
