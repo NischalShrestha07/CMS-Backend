@@ -1,3 +1,5 @@
+//  The Defect of this approch is that we have to use multiples useState as the number of the datas to be placed or inputed.
+
 const { connectDatabase } = require("./database/database")
 const Blog = require("./model/blogModel")
 const express = require("express")
